@@ -3,4 +3,5 @@
     <string name="MatrikelNummerEingabeInfoText">Gib deine Matrikelnummer ein:</string>
     <string name="ServerAntwortInfoText">Antwort vom Server:</string>
     <string name="SendToServerButtonText">Get Server Response</string>
+    <string name="CalaculatePrimeNumbersButtonText">Prim Zahlen berechnen</string>
 </resources>
