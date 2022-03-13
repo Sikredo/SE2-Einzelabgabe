@@ -21,7 +21,9 @@ public class MainActivity extends AppCompatActivity {
         sendToServerButton = findViewById(R.id.SendToServerButton);
 
         sendToServerButton.setOnClickListener(view -> {
-
+            MatrikelNummerHandler mNummerHandler = new MatrikelNummerHandler(this.matrikelNummerInput.getText().toString(),this.matrikelNummerOutput);
+            TCPThread tcpThread = new TCPThread("se2-isys.aau.at", 53212, mNummerHandler);
+            new Thread(tcpThread).start();
         });
     }
 }
