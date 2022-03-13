@@ -1,4 +1,4 @@
-package se2.fischbacher.einzelabgabe;
+package se2.fischbacher.einzelabgabe.threads;
 
 import android.util.Log;
 
@@ -8,12 +8,14 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.Socket;
 
+import se2.fischbacher.einzelabgabe.handler.interfaces.TCPHandler;
+
 public class TCPThread implements Runnable {
     private String host;
     private Integer port;
     private TCPHandler handler;
 
-    TCPThread(String host, Integer port, TCPHandler handler) {
+    public TCPThread(String host, Integer port, TCPHandler handler) {
         this.host = host;
         this.port = port;
         this.handler = handler;

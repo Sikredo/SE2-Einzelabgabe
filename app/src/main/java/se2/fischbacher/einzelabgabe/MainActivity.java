@@ -1,10 +1,13 @@
 package se2.fischbacher.einzelabgabe;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import se2.fischbacher.einzelabgabe.handler.impl.ServerMatrikelNummerHandler;
+import se2.fischbacher.einzelabgabe.threads.TCPThread;
 
 public class MainActivity extends AppCompatActivity {
     TextView matrikelNummerInput;
@@ -21,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         sendToServerButton = findViewById(R.id.SendToServerButton);
 
         sendToServerButton.setOnClickListener(view -> {
-            MatrikelNummerHandler mNummerHandler = new MatrikelNummerHandler(this.matrikelNummerInput.getText().toString(),this.matrikelNummerOutput);
+            ServerMatrikelNummerHandler mNummerHandler = new ServerMatrikelNummerHandler(this.matrikelNummerInput.getText().toString(), this.matrikelNummerOutput);
             TCPThread tcpThread = new TCPThread("se2-isys.aau.at", 53212, mNummerHandler);
             new Thread(tcpThread).start();
         });

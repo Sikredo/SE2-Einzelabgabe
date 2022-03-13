@@ -1,12 +1,14 @@
-package se2.fischbacher.einzelabgabe;
+package se2.fischbacher.einzelabgabe.handler.impl;
 
 import android.widget.TextView;
 
-public class MatrikelNummerHandler implements TCPHandler {
+import se2.fischbacher.einzelabgabe.handler.interfaces.TCPHandler;
+
+public class ServerMatrikelNummerHandler implements TCPHandler {
     private String matrikelNummer;
     private TextView matrikelNummerOutput;
 
-    public MatrikelNummerHandler(String matrikelNummer, TextView output) {
+    public ServerMatrikelNummerHandler(String matrikelNummer, TextView output) {
         this.matrikelNummer = matrikelNummer;
         this.matrikelNummerOutput = output;
     }
