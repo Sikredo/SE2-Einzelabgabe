@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">Einzelabgabe</string>
     <string name="MatrikelNummerEingabeInfoText">Gib deine Matrikelnummer ein:</string>
+    <string name="ServerAntwortInfoText">Antwort vom Server:</string>
+    <string name="SendToServerButtonText">Get Server Response</string>
 </resources>
