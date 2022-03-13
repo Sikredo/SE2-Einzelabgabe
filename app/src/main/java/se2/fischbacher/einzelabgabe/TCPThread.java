@@ -26,7 +26,7 @@ public class TCPThread implements Runnable {
             DataOutputStream toServer = new DataOutputStream(socket.getOutputStream());
             BufferedReader fromServer = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 
-            toServer.writeBytes(this.handler.getRequestString());
+            toServer.writeBytes(this.handler.getRequestString()+"\n");
             this.handler.handleServerResponse(fromServer.readLine());
             socket.close();
         } catch (IOException exception) {
