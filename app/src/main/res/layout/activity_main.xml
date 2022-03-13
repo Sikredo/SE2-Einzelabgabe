@@ -4,4 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"/>
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/MatrikelNummerEingabeInfo"
+        android:layout_width="273dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="68dp"
+        android:labelFor="@id/MatrikelnummerEingabe"
+        android:text="@string/MatrikelNummerEingabeInfoText"
+        app:layout_constraintBottom_toTopOf="@+id/MatrikelnummerEingabe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/MatrikelnummerEingabe"
+        android:layout_width="220dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="140dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.361"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+</androidx.constraintlayout.widget.ConstraintLayout>

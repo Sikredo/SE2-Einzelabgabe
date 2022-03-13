@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Einzelabgabe</string>
+    <string name="MatrikelNummerEingabeInfoText">Gib deine Matrikelnummer ein:</string>
 </resources>
